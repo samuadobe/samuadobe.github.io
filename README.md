@@ -1,2 +1,0 @@
-# samuadobe.github.io
-Tentativa
