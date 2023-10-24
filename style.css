@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.White{
+    --corbgheader: rgb(233, 233, 233); 
+    --corbg: #f2f2f2;
+    --corletra:rgb(53, 53, 53);
+    --corlogo:rgb(53, 53, 53);
+
+}
+
+.Dark{
+    --corbgheader: rgb(12, 12, 12); 
+    --corbg: #2e2e2e;
+    --corletra:rgb(255, 255, 255);
+    --corlogo:rgb(255, 255, 255);
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--corbg);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--corbgheader);
+    color: var(--corletra);
+}
+ 
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--corlogo);
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--corletra)
+}
+
+h2, h3, h4, h5, .inputs{
+    color: var(--corletra)
+}
+
+p, input {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--corletra)
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(53, 53, 53);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu li a {
+    color: var(--corletra);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(233, 233, 233);
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 20px 0;
+    }
+
+    .menu li a {
+        font-size: 24px;
+    }
+
+    .change .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    .change .menu {
+        display: block;
+      }
+    }
+        
